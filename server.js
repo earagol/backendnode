@@ -3,8 +3,12 @@ const bodyParser = require('body-parser')
 
 const response = require('./networks/response')
 
+const db = require('./db')
+
 // const router = require('./components/messages/network')
 const routes = require('./networks/routes')
+
+db('mongodb+srv://erisk:camila13@cluster0-xmsn8.mongodb.net/test?retryWrites=true&w=majority')
 
 var app = express()
 app.use(bodyParser.json())//Para recibir json
